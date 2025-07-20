@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strayer Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav style="display: flex; align-items: center; justify-content: space-between;">
+            <ul class="nav-links" style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li class="selected" style="font-weight: bold; background: var(--soft-pink); border-radius: 10px; padding: 2px">
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="custom.html">Testimonials</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="welcome" style="text-align: center; margin-top: 1rem; color: var(--dark-blue);">
+            <span style="display: inline-flex; align-items: center; justify-content: center;">
+                <h2 style="color: var(--dark-blue); display: inline; margin: 0;">
+                    Welcome to Book Haven
+                </h2>
+                <img src="images/Client3_LogoPalette1_2E4057.png" alt="Book Haven Logo" style="height: 2.5rem; margin-left: 0.5rem;">
+            </span>
+            <p>Your one-stop destination for all your book needs.</p>
+        </div>
+    </header>
+    <main>
+        <section class="about" style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 800px; margin: 2rem auto;">
+            <h2 style="color: var(--vintage-paper);">About Us</h2>
+            <p>Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies. With a deep-rooted commitment to fostering literary exploration and a love for reading, it is embarking on the creation of an online presence that mirrors its dedication to the world of words. Serving a broad audience of book lovers and knowledge seekers, its central goal is to amplify its visibility and cultivate a vibrant literary community.</p>
+        </section>
+    
+        <section class="business-hours" style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 800px; margin: 2rem auto;">
+            <h2 style="color: var(--vintage-paper);">Business Hours</h2>
+            <p><em>Monday to Friday: 9 a.m. - 8 p.m.</em></p>
+            <p><em>Saturday: 10 a.m. - 6 p.m.</em></p>
+            <p><em>Sunday: 11 a.m. - 5 p.m.</em></p>
+        </section>
+
+        <section class="contact-us-form" style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 800px; margin: 2rem auto; width: 100%;">
+            <form action="submit_contact_form.php" method="post" style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+                <h2>Contact Us</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; box-sizing: border-box;">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box;">
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required style="width: 100%; box-sizing: border-box;">
+                
+                <label for="customOrder">Custom Order:</label>
+                <textarea id="customOrder" name="customOrder" rows="4" required style="width: 100%; box-sizing: border-box;"></textarea>
+                
+                <button type="submit" style="padding: 0.5rem 1rem; background: var(--vivid-orange); color: var(--vintage-paper); border-radius: 4px; border: none; cursor: pointer; width: fit-content; align-self: flex-end;">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer style="width: 100%; margin-top: auto;">
+        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;">
+                <h2 style="color: var(--dark-blue)">Stay Updated</h2>
+                <h2 style="color: var(--dark-blue)">Subscribe to our newsletter for the latest updates and promotions.</h2>
+                <form style="display: flex; gap: 0.5rem; align-items: center;">
+                    <input type="email" placeholder="Enter your email" required style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc;">
+                    <button type="submit" style="padding: 0.5rem 1rem; background: var(--vivid-orange); color: var(--vintage-paper); border: none; border-radius: 4px; cursor: pointer;">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <p>&copy; 2024 Book Haven Bookstore. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('footer form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = form.querySelector('input[type="email"]');
+                const emailValue = emailInput.value.trim();
+                // Simple email regex for validation
+                const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+                if (!emailValue) {
+                    alert('Please enter your email address.');
+                    emailInput.focus();
+                    return;
+                }
+                if (!emailPattern.test(emailValue)) {
+                    alert('Please enter a valid email address.');
+                    emailInput.focus();
+                    return;
+                }
+                alert('Thank you for subscribing.');
+                form.reset();
+            });
+        });
+
+        document.querySelector('.contact-us-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const customOrder = document.getElementById('customOrder').value;
+            const customerInfo = { name, email, phone, customOrder };
+            localStorage.setItem('customerInfo', JSON.stringify(customerInfo));
+            alert('Thank you for your message');
+            this.reset();
+        });
+        document.querySelectorAll('.gallery-item button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Item added to the cart');
+            });
+        });
+        document.getElementById('clear-cart').addEventListener('click', function() {
+            if (cartCount > 0) {
+                cartCount = 0;
+                alert('Cart cleared');
+            } else {
+                alert('No items to clear.');
+            }
+        });
+        document.getElementById('process-order').addEventListener('click', function() {
+            if (cartCount > 0) {
+                cartCount = 0;
+                alert('Thank you for your order');
+            } else {
+                alert('Cart is empty.');
+            }
+        });
+    </script>
+</body>
+</html>

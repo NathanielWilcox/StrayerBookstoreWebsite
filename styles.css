@@ -1,0 +1,245 @@
+/* Strayer Bookstore Website Styles */
+
+/* Color Palette */
+:root {
+    --parchment-white: #FFF7EE;
+    --vintage-paper: #C1CFC6;
+    --deep-blue: #2E4057;
+    --vivid-orange: #EE583F;
+    --soft-pink: #F7B3CC;
+    --golden-yellow: #C7B65E;
+}
+/* Typography */
+.title-large {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--deep-blue);
+}
+
+.title {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--deep-blue);
+}
+
+.subtitle {
+    font-family: 'Comfortaa', cursive, sans-serif;
+    font-size: 1rem;
+    color: var(--soft-pink);
+}
+
+.body-large {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 1.25rem;
+    color: var(--deep-blue);
+}
+
+.body-strong {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--deep-blue);
+}
+
+.body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 1rem;
+    color: var(--deep-blue);
+}
+
+.caption {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem;
+    color: var(--golden-yellow);
+    font-weight: bold;
+}
+
+/* Layout */
+body {
+    background-color: var(--deep-blue);
+    color: var(--parchment-white);
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: var(--vintage-paper);
+    color: var(--deep-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Logo */
+.logo {
+    color: var(--vivid-orange);
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--vintage-paper);
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1em;
+}
+
+nav a {
+    color: var(--deep-blue);
+    background: none;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    background-color: var(--vivid-orange);
+    color: var(--parchment-white);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--vintage-paper);
+    margin-top: 0;
+}
+
+h2 {
+    color: var(--deep-blue);
+    margin-bottom: 1em;
+}
+
+/* Card */
+.card {
+    background: var(--parchment-white);
+    color: var(--deep-blue);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(46, 64, 87, 0.08);
+    padding: 1.5em;
+    margin: 1em 0;
+}
+
+/* Accent */
+.accent {
+    color: var(--soft-pink);
+}
+
+/* Buttons */
+.button,
+input[type="submit"],
+button {
+    background-color: var(--vivid-orange);
+    color: var(--parchment-white);
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+button:hover {
+    background-color: var(--golden-yellow);
+    color: var(--deep-blue);
+}
+
+/* Links */
+a {
+    color: var(--vivid-orange);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--soft-pink);
+}
+
+a[href] {
+    color: var(--vivid-orange);
+    text-decoration: underline;
+}
+
+a[href]:hover {
+    color: var(--soft-pink);
+    text-decoration: none;
+}
+
+/* Forms */
+form {
+    background-color: var(--vintage-paper);
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(46, 64, 87, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: var(--deep-blue);
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid var(--deep-blue);
+    border-radius: 4px;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    background: var(--parchment-white);
+    color: var(--deep-blue);
+}
+
+/* Footer */
+footer {
+    background-color: var(--vintage-paper);
+    color: var(--deep-blue);
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header, footer, nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .button,
+    input[type="submit"],
+    button {
+        width: 100%;
+    }
+    .card {
+        margin: 1em 0.5em;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strayer Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav style="display: flex; align-items: center; justify-content: space-between;">
+            <ul class="nav-links" style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+                <li class="selected" style="font-weight: bold; background: var(--soft-pink); border-radius: 10px; padding: 2px">
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="custom.html">Testimonials</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="welcome" style="text-align: center; margin-top: 1rem; color: var(--dark-blue);">
+            <span style="display: inline-flex; align-items: center; justify-content: center;">
+                <h2 style="color: var(--dark-blue); display: inline; margin: 0;">
+                    Welcome to Book Haven
+                </h2>
+                <img src="images/Client3_LogoPalette1_2E4057.png" alt="Book Haven Logo" style="height: 2.5rem; margin-left: 0.5rem;">
+            </span>
+            <p>Your one-stop destination for all your book needs.</p>
+        </div>
+    </header>
+    <main>
+        <section class="Title" style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 800px; margin: 2rem auto;">
+            <h1 class="title-large" style="color: var(--parchment-white)">Book Haven</h1>
+        </section>
+        
+        <section class="promotions" style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 800px; margin: 2rem auto;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h2 style="color: var(--parchment-white)">Current Promotions</h2>
+                <p>Check out our latest promotions and offers on selected books and office supplies.</p>
+                <p>Click on the links below to explore the promotions:</p>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                    <li>
+                        <a href="gallery.html?category=promotions&promo=buy2get1" style="padding: 0.5rem 1rem; background: var(--golden-yellow); color: var(--parchment-white); border-radius: 4px; text-decoration: none; font-size: 1rem;">
+                            Buy 2 Get 1 Free on selected fiction books
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gallery.html?category=promotions&promo=20off-nonfiction" style="padding: 0.5rem 1rem; background: var(--golden-yellow); color: var(--parchment-white); border-radius: 4px; text-decoration: none; font-size: 1rem;">
+                            20% off on all non-fiction titles
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gallery.html?category=promotions&promo=free-shipping" style="padding: 0.5rem 1rem; background: var(--golden-yellow); color: var(--parchment-white); border-radius: 4px; text-decoration: none; font-size: 1rem;">
+                            Free shipping on orders over $50
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="hook" style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 800px; margin: 2rem auto;">
+            <h2 style= "color: var(--parchment-white);">Why should you shop here?</h2>
+            <p>With a deep-rooted commitment to fostering literary exploration and a love for reading, it is embarking on the creation of an online presence that mirrors its dedication to the world of words. 
+                Serving a broad audience of book lovers and knowledge seekers, its central goal is to amplify its visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases. 
+                Its target audience comprises avid readers, students, and individuals in search of high-quality reading materials and office essentials.</p>
+        </section>
+        <section class="categories" style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 800px; margin: 2rem auto;">
+            <h2 style="color: var(--parchment-white);">Category</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="gallery.html?category=books" style="padding: 0.75rem 1.5rem; background: var(--vivid-orange); color: var(--vintage-paper); border: none; border-radius: 4px; text-decoration: none; font-size: 1rem; cursor: pointer;">Books</a>
+                <a href="gallery.html?category=magazines" style="padding: 0.75rem 1.5rem; background: var(--vivid-orange); color: var(--vintage-paper); border: none; border-radius: 4px; text-decoration: none; font-size: 1rem; cursor: pointer;">Magazines</a>
+                <a href="gallery.html?category=journals" style="padding: 0.75rem 1.5rem; background: var(--vivid-orange); color: var(--vintage-paper); border: none; border-radius: 4px; text-decoration: none; font-size: 1rem; cursor: pointer;">Journals</a>
+                <a href="gallery.html?category=office-supplies" style="padding: 0.75rem 1.5rem; background: var(--vivid-orange); color: var(--vintage-paper); border: none; border-radius: 4px; text-decoration: none; font-size: 1rem; cursor: pointer;">Office Supplies</a>
+            </div>
+        </section>
+    </main>
+    <footer style="width: 100%; margin-top: auto;">
+        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;">
+                <h2 style="color: var(--dark-blue)">Stay Updated</h2>
+                <h2 style="color: var(--dark-blue)">Subscribe to our newsletter for the latest updates and promotions.</h2>
+                <form style="display: flex; gap: 0.5rem; align-items: center;">
+                    <input type="email" placeholder="Enter your email" required style="padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc;">
+                    <button type="submit" style="padding: 0.5rem 1rem; background: var(--vivid-orange); color: var(--parchment-white); border: none; border-radius: 4px; cursor: pointer;">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <p>&copy; 2024 Book Haven Bookstore. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('footer form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = form.querySelector('input[type="email"]');
+                const emailValue = emailInput.value.trim();
+                // Simple email regex for validation
+                const emailPattern = /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/;
+                if (!emailValue) {
+                    alert('Please enter your email address.');
+                    emailInput.focus();
+                    return;
+                }
+                if (!emailPattern.test(emailValue)) {
+                    alert('Please enter a valid email address.');
+                    emailInput.focus();
+                    return;
+                }
+                alert('Thank you for subscribing.');
+                form.reset();
+            });
+        });
+
+        document.querySelectorAll('.gallery-item button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Item added to the cart');
+            });
+        });
+
+        // Add these buttons to your HTML if not present:
+        document.getElementById('clear-cart').addEventListener('click', function() {
+            if (cartCount > 0) {
+                cartCount = 0;
+                alert('Cart cleared');
+            } else {
+                alert('No items to clear.');
+            }
+        });
+
+        document.getElementById('process-order').addEventListener('click', function() {
+            if (cartCount > 0) {
+                cartCount = 0;
+                alert('Thank you for your order');
+            } else {
+                alert('Cart is empty.');
+            }
+        });
+    </script>
+</body>
+</html>
